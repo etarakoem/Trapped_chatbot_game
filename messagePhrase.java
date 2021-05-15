@@ -44,10 +44,10 @@ public class messagePhrase {
                 String line = lines.nextLine();
                 if (line.contains(begin))
                 {
-                    String name = line.substring(begin.length(), line.length() - 1);
-                    if (name.equals(find)) 
+                    String name = line.substring(begin.length(), line.length());
+                    if  (name.equals(find))
                     {
-                        result.add(name);
+                        // result.add(name);
                         String nextLine = lines.nextLine();
                         while (!nextLine.contains(end)) 
                         {

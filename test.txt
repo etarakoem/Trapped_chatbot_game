@@ -1,4 +1,4 @@
-<Begin tag> Introduction:
+<Begin tag> Introduction
 Greetings detective, we got a new case for you.
 Our client report an incident. Some hackers did something to their app.
 We have built the prototype and retrieve their smart Chatbot. Investigate the App and chat with their ChatBot to see what happened.
@@ -10,6 +10,6 @@ Good luck Detective.
 
 <end tag> 
 
-<Begin tag> Level1
+<Begin tag> Level 
 Something written here.
 <end tag> 
