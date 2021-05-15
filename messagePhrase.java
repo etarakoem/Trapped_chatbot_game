@@ -21,7 +21,8 @@ public class messagePhrase {
         try
         {
             ArrayList<String> array = getMessages(find);
-            for (String part: array)
+            System.out.println("Lines:" +array.size());
+            for (String part: array) 
             System.out.println(part);
         }
         catch(FileNotFoundException e){
@@ -37,22 +38,27 @@ public class messagePhrase {
         ArrayList<String> result = new ArrayList<String>();
         try
         {
-
             // Extract from file then get into the Name tag
             Scanner lines = new Scanner(new File(file));
-            while (lines.hasNextLine()) {
+            while (lines.hasNextLine()) 
+            {
                 String line = lines.nextLine();
-                if (line.contains(begin)) {
+                if (line.contains(begin))
+                {
                     String name = line.substring(begin.length(), line.length() - 1);
-                    if (name.equals(find)) {
+                    if (name.equals(find)) 
+                    {
                         result.add(name);
                         String nextLine = lines.nextLine();
-                        while (!nextLine.contains(end)) {
-                            System.out.println(nextLine);
+                        while (!nextLine.contains(end)) 
+                        {
                             result.add(nextLine);
                             nextLine = lines.nextLine();
                         }
-                        return result;
+                        if (nextLine.contains(end))
+                        {
+                            return result;
+                        }
                     }
                 }
             }

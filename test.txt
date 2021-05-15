@@ -8,8 +8,8 @@ The Prototype can be retrieve via:
 
 Good luck Detective.
 
-<end tag> Introduction
+<end tag> 
 
 <Begin tag> Level1
 Something written here.
-<end tag> Level1
+<end tag> 

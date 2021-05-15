@@ -5,6 +5,8 @@ public class mainGame{
         messagePhrase intro = new messagePhrase();
         // ArrayList <String> introduction = new intro.getMessages("Introduction");
         intro.getCurrentFile();
+        System.out.println("Start printing");
         intro.messagePrint("Introduction");
+        System.out.println("end printing");
     }
 }
