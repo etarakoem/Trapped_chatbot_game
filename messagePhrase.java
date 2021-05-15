@@ -46,9 +46,11 @@ public class messagePhrase {
                     String name = line.substring(begin.length(), line.length() - 1);
                     if (name.equals(find)) {
                         result.add(name);
-                        while (!line.contains(end)) {
-                            String nextLine = lines.nextLine();
+                        String nextLine = lines.nextLine();
+                        while (!nextLine.contains(end)) {
+                            System.out.println(nextLine);
                             result.add(nextLine);
+                            nextLine = lines.nextLine();
                         }
                         return result;
                     }
