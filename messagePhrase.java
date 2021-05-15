@@ -21,7 +21,6 @@ public class messagePhrase {
         try
         {
             ArrayList<String> array = getMessages(find);
-            System.out.println("Lines:" +array.size());
             for (String part: array) 
             System.out.println(part);
         }
