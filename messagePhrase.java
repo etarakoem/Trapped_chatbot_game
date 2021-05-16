@@ -123,7 +123,7 @@ public class messagePhrase {
     public void menuMessage(){
         System.out.println("==================");
         System.out.println("Edit Options menu:");
-        System.out.println("Input 'a <name> <number of options>' to add options for '"+ this.file+"'");
+        System.out.println("Input 'a <number of options>' to add options for '"+ this.file+"'");
         System.out.println("Input 'b <name>' to add options with blank spaces for '"+ this.file+"'");
         System.out.println("Input 'c' to add long name/options with blank spaces for '"+ this.file+"'");
         System.out.println("input 'q' to quit");
@@ -138,7 +138,9 @@ public class messagePhrase {
         String userInput = commandInput.next();
         while (!userInput.equalsIgnoreCase("q")){
             if (userInput.equalsIgnoreCase("a")){
-                String name = commandInput.next();
+                System.out.println("Long name/options for file: ");
+                Scanner input = new Scanner(System.in);
+                String name = input.nextLine();
                 if (commandInput.hasNextInt()){
                     int number = commandInput.nextInt();
                     addOptions(name, number);
