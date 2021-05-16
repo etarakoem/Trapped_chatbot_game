@@ -80,6 +80,7 @@ public class messagePhrase {
             FileWriter file = new FileWriter(this.file, true);
 
             if (number == -1){
+                customMenu("Adding Long name, then adding Long quote, many lines. When finish, input in 'd'");
                 System.out.println("Long name/options for file: ");
                 Scanner input = new Scanner(System.in);
                 String options = input.nextLine();
@@ -120,6 +121,11 @@ public class messagePhrase {
         }
     }
 
+    public void customMenu(String message){
+        System.out.println("==================");
+        System.out.println(message);
+        System.out.println("==================");
+    }
     public void menuMessage(){
         System.out.println("==================");
         System.out.println("Edit Options menu:");
@@ -144,7 +150,7 @@ public class messagePhrase {
                 if (commandInput.hasNextInt()){
                     int number = commandInput.nextInt();
                     addOptions(name, number);
-                    System.out.println("Succesfully add "+ name +" and "+number+" lines into "+ this.file);
+                    System.out.println("\n Succesfully add "+ name +" and "+number+" lines into "+ this.file + "\n");
                 }
                 else{
                     addOptions(name, 0);
@@ -153,7 +159,7 @@ public class messagePhrase {
             else if (userInput.equalsIgnoreCase("b")){
                 String name = commandInput.next();
                 addOptions(name, 0);
-                System.out.println("Succesfully add "+ name +" into "+ this.file);
+                System.out.println("\n Succesfully add "+ name +" into "+ this.file + "\n");
             }
             else if (userInput.equalsIgnoreCase("c"))
             {
