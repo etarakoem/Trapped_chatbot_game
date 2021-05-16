@@ -10,6 +10,32 @@ Good luck Detective.
 
 <end tag> 
 
-<Begin tag> Level 
+<Begin tag> Level
 Something written here.
 <end tag> 
+
+<Begin tag> Apple, Banana, Fish
+Yes yes, that's weird, isn't it?
+
+I hear some music ... 
+No, Chatbots aren't supposed to, but the hackers enable me. 
+I'm smart you know, almost like a person, but playing one song over and over 24/7 drives me crazy.
+The switch... it's inside another dog, a bunny wearing waffles, and a hamster on a swing? 
+I think I heard music from one of them.
+
+<end tag> 
+
+<Begin tag> Dancing in my room
+Ah. Thank you for turning it off. 
+
+The song stuck in my head for a while, 
+Can you show me what spring is like on Jupiter and Mars?
+<end tag> 
+
+<Begin tag> Fly me to the moon
+To the moon 🌝, 🚀 to the moon! off we go!
+
+I need a pet to bring with me to the moon tho, can you search and suggest the best pet to bring then? 🐱
+<end tag> 
+
+

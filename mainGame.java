@@ -1,15 +1,59 @@
-import java.util.ArrayList;
+import java.util.*;
+import java.io.*;
 
 public class mainGame{
     public static void main(String[] args){
         messagePhrase intro = new messagePhrase("test.txt");
+        messagePhrase options = new messagePhrase("options.txt");
+        messagePhrase cases = new messagePhrase("tempcase.txt");
 
-        // ArrayList <String> introduction = new intro.getMessages("Introduction");
-        // intro.getCurrentFile();
-        // System.out.println("Start printing");
+        // System.out.print("Current case file: ");
+
+        // cases.getCurrentFile();
+
         intro.messagePrint("Introduction");
 
-        intro.messagePrint("Level");
-        // System.out.println("end printing");
+        // intro.messagePrint("Level");   
+
+        // options.menu();
+        editFile(options, intro, cases);
+
+    }
+
+    public static void commandMessage(messagePhrase intro, messagePhrase options, messagePhrase cases){
+        System.out.println("==================");
+        System.out.println("Main menu:");
+        System.out.println("Input 'a' for " + intro.getFileName()+ ", 'b' for " + options.getFileName() + " or 'c' for " + cases.getFileName());
+        System.out.println("input 'q' to quit");
+        System.out.println("==================");
+        System.out.println("Your input: ");
+    }
+
+    public static void editFile(messagePhrase intro, messagePhrase options, messagePhrase cases){
+        commandMessage(intro,options,cases);
+        Scanner commandInput = new Scanner(System.in);
+        String userInput = commandInput.nextLine();
+        while (!userInput.equalsIgnoreCase("q"))
+        {
+            switch(userInput.charAt(0))
+            {
+                case 'a':
+                intro.menu();
+                break;
+                case 'b':
+                options.menu();
+                break;
+                case 'c':
+                cases.menu();
+                break;
+                case 'q':
+                break;
+                default:
+                System.out.println("Can't find user input");
+                break;
+            }
+            commandMessage(intro,options,cases);
+            userInput = commandInput.nextLine();
+        }
     }
 }
