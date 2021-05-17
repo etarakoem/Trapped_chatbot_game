@@ -1,0 +1,34 @@
+<Begin tag> Introduction
+1) Got my prototype! Activate my chatbot.
+<end tag> 
+
+
+<Begin tag> Stage_1.0
+1) Apple, Banana, Fish
+2) Dog food, fish, seeds?
+3) Human
+<end tag> 
+
+<Begin tag> Human
+1) Just messing with you
+2) Become
+3) What say they don't?
+<end tag> 
+
+<Begin tag> Fly me to the moon
+1) Cat
+2) Dog
+3) Chatbots
+<end tag> 
+
+<Begin tag> Cat 🐱
+1) Cat 🐱
+2) Dogs 🐶
+3) Chatbots
+<end tag> 
+
+<Begin tag> Dogs 🐶
+1) Can't bark 🐱
+2) I will press"see more" ...
+3) Human
+<end tag> 

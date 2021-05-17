@@ -1,0 +1,63 @@
+<Begin tag> Introduction
+Greetings detective, we got a new case for you.
+Our client report an incident. Some hackers did something to their app.
+We have built the prototype and retrieve their smart Chatbot. Investigate the App and chat with their ChatBot to see what happened.
+
+The Prototype can be retrieve via:
+ https://www.figma.com/proto/kJWzmVaTUN6MmK585aIGai/Prototyping-in-Figma?node-id=0%3A2&scaling=scale-down&page-id=0%3A1
+
+Good luck Detective.
+
+<end tag> 
+
+<Begin tag> Level
+Something written here.
+<end tag> 
+
+<Begin tag> Apple, Banana, Fish
+Yes yes, that's weird, isn't it?
+
+I hear some music ... 
+No, Chatbots aren't supposed to, but the hackers enable me. 
+I'm smart you know, almost like a person, but playing one song over and over 24/7 drives me crazy.
+The switch... it's inside another dog, a bunny wearing waffles, and a hamster on a swing? 
+I think I heard music from one of them.
+
+<end tag> 
+
+<Begin tag> Dancing in my room
+Ah. Thank you for turning it off. 
+
+The song stuck in my head for a while, 
+Can you show me what spring is like on Jupiter and Mars?
+<end tag> 
+
+<Begin tag> Fly me to the moon
+To the moon 🌝, 🚀 to the moon! off we go!
+
+I need a pet to bring with me to the moon tho, can you search and suggest the best pet to bring then? 🐱
+<end tag> 
+
+
+<Begin tag> Can't bark 🐱
+Ah Yes. 
+
+Greetings again, I am Bot De Samew I was a bot from another app...
+But I can't remember what kind of app it was... hmm
+
+However, I remember a story!
+
+You know, Once upon a time, I found a chatbot. 
+A very, very clever one. 
+It is so clever that I thought it is a real human.
+I wonder if a human is cursed and turn into the chatbot system?
+So I asked it
+And it replied: 
+"Wdnh ph edfn wr wkh prphqw ehiruh L orjjhg lq.
+Ilqg ph xqghuqhdwk" 
+Very strange language tho.
+
+Anyway, can you find me what is my speciality then?🐧
+
+<end tag> 
+
