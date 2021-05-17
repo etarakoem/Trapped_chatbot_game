@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class messagePhrase {
-    private String file, option;
+    private String file;
     final String begin= "<Begin tag> ";
     final String end = "<end tag> ";
 
@@ -73,48 +73,70 @@ public class messagePhrase {
         return result;
     }
 
+    public boolean nameCheck(String nameCompare)
+    {
+        try
+        {
+            // Extract from file then get into the Name tag
+            Scanner lines = new Scanner(new File(file));
+            while (lines.hasNextLine()) 
+            {
+                String line = lines.nextLine();
+                if (line.contains(begin))
+                {
+                    String name = line.substring(begin.length(), line.length());
+                    if  (name.equals(nameCompare))
+                        return true;
+                }
+            }
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     public void addOptions(String name, int number){
         try 
         {
-            FileWriter file = new FileWriter(this.file, true);
+            FileWriter targetFile = new FileWriter(this.file, true);
 
             if (number == -1){
                 customMenu("Adding Long name, then adding Long quote, many lines. When finish, input in 'd'");
                 System.out.println("Long name/options for file: ");
                 Scanner input = new Scanner(System.in);
                 String options = input.nextLine();
-                file.write(begin + options + "\n");
+                targetFile.write(begin + options + "\n");
                 
                 System.out.println("Long phrase to add in: ");
                 
                 options = input.nextLine();
                 while (!options.equalsIgnoreCase("d"))
                 {
-                    if (!options.equalsIgnoreCase("d")) file.write(options + "\n");   
+                    if (!options.equalsIgnoreCase("d")) targetFile.write(options + "\n");   
                     options = input.nextLine();
                 }
 
-                file.write(end + "\n");
-                file.close();
+                targetFile.write(end + "\n");
+                targetFile.close();
                 return;
             }
 
-            file.write("\n");
-            file.write(begin + name + "\n");
+            targetFile.write("\n");
+            targetFile.write(begin + name + "\n");
 
             if (number!=0){
                 Scanner input = new Scanner(System.in);
                 for (int i = 1; i < number+1; i++){
                     System.out.print("Option for: " + i +"): ");
                     String options = input.nextLine();
-                    file.write(i + ") " + options);
-                    file.write("\n");
+                    targetFile.write(i + ") " + options);
+                    targetFile.write("\n");
                 }
             }
 
-            file.write(end + "\n");
-            file.close();
+            targetFile.write(end + "\n");
+            targetFile.close();
         }
         catch(IOException e){
             e.printStackTrace();
