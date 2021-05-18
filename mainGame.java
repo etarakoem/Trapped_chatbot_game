@@ -7,15 +7,9 @@ public class mainGame{
         messagePhrase options = new messagePhrase("options.txt");
         messagePhrase cases = new messagePhrase("tempcase.txt");
 
-        // System.out.print("Current case file: ");
-
-        // cases.getCurrentFile();
-
         intro.messagePrint("Introduction");
 
-        // intro.messagePrint("Level");   
-
-        // options.menu();
+        
         editFile(options, intro, cases);
 
     }
