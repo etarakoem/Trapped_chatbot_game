@@ -202,11 +202,17 @@ public class messagePhrase {
         System.out.println("==================");
     }
     public String takeUserInput(){
-        System.out.println("Hey, type your input here: ");
-        Scanner input = new Scanner(System.in);
-        String userinput = input.nextLine();
-        if ((userinput.length()==1)&&(Integer.parseInt(userinput)<4) && (Integer.parseInt(userinput)>0))
+        try{
+            System.out.println("Hey, type your input here: ");
+            Scanner input = new Scanner(System.in);
+            String userinput = input.nextLine();
+            if ((userinput.length()==1)&&(Integer.parseInt(userinput)<4) && (Integer.parseInt(userinput)>0))
             return userinput;
+        }
+        catch(NumberFormatException e)
+        {
+           System.out.println("Quitting...");
+        }
         return "q";
     }
 

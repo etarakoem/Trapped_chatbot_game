@@ -20,6 +20,10 @@ public class mainGame{
     }
 
     public static void popUp(messagePhrase quotes, messagePhrase options, String message){
+        if (!quotes.nameCheck(message) || !options.nameCheck(message)){
+            System.out.println("No info, return to previous");
+            return;
+        }
         quotes.messagePrint(message);
         options.messagePrint(message);
     }
@@ -33,8 +37,6 @@ public class mainGame{
         }
         // System.out.println("input "+input);
         String choice = options.pickOptions("Greetings", input);
-        // System.out.println("Choice: "+choice);
-        // popUp(quotes, options, choice);
         gameRestart = false;
         while (!gameRestart){
             popUp(quotes, options, choice);
