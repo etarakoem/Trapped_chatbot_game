@@ -1,4 +1,5 @@
 import java.util.*;
+
 import java.io.*;
 
 public class messagePhrase {
@@ -148,12 +149,12 @@ public class messagePhrase {
         System.out.println(message);
         System.out.println("==================");
     }
-    public void menuMessage(){
+    public void menuMessage(String a, String b, String c){
         System.out.println("==================");
         System.out.println("Edit Options menu:");
-        System.out.println("Input 'a <number of options>' to add options for '"+ this.file+"'");
-        System.out.println("Input 'b <name>' to add options with blank spaces for '"+ this.file+"'");
-        System.out.println("Input 'c' to add long name/options with blank spaces for '"+ this.file+"'");
+        System.out.println("Input 'a <number of options>' to add options for '"+ a+"'");
+        System.out.println("Input 'b <name>' to add options with blank spaces for '"+ b+"'");
+        System.out.println("Input 'c' to add long name/options with blank spaces for '"+ c+"'");
         System.out.println("input 'q' to quit");
         System.out.println("==================");
         System.out.println("Your input:");
@@ -161,7 +162,7 @@ public class messagePhrase {
 
     public void menu()
     {
-        menuMessage();
+        menuMessage(this.file,this.file,this.file);
         Scanner commandInput = new Scanner(System.in);
         String userInput = commandInput.next();
         while (!userInput.equalsIgnoreCase("q")){
@@ -188,9 +189,43 @@ public class messagePhrase {
                 addOptions("", -1);
             }
             userInput = commandInput.nextLine();
-            System.out.println("What next? 'q' to return");
+
+            System.out.println("Press 'q' to return");
         }
         if (userInput.equalsIgnoreCase("q")) System.out.println("(Return to menu)...");
+    }
+
+    public void inGameOptions(){
+        System.out.println("==================");
+        System.out.println("Choose '1','2','3' for options");
+        System.out.println("Any other keys to quit");
+        System.out.println("==================");
+    }
+    public String takeUserInput(){
+        System.out.println("Hey, type your input here: ");
+        Scanner input = new Scanner(System.in);
+        String userinput = input.nextLine();
+        if ((userinput.length()==1)&&(Integer.parseInt(userinput)<4) && (Integer.parseInt(userinput)>0))
+            return userinput;
+        return "q";
+    }
+
+    // Print out full name title
+    public String pickOptions(String quote,String option){
+        try{
+            messagePrint(quote);
+            inGameOptions();
+            ArrayList<String> quotes = getMessages(quote);
+            String choices = option+")";
+            for (String opt:quotes){
+                if (opt.contains(choices)){
+                    return opt.substring(3, opt.length());
+                }
+            }
+        }
+        catch(FileNotFoundException e){e.printStackTrace();}
+
+        return "q";
     }
 
 }
