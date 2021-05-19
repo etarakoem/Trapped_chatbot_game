@@ -32,3 +32,26 @@
 2) I will press"see more" ...
 3) Human
 <end tag> 
+
+<Begin tag> Can't bark 🐱
+1) Speciality of forgettin...
+2) I decoded it.
+3) Other options
+<end tag> 
+
+<Begin tag> Other options
+1) Tarot?
+2) Ratot
+3) Chatbots
+<end tag> 
+
+<Begin tag> Tarot?
+1) Trapped?
+2) The fool The fool The f...
+<end tag> 
+
+<Begin tag> Trapped?
+1) Something still missing...
+2) Is that an Easter egg? ...
+3) Aight
+<end tag> 

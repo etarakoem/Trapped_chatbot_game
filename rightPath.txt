@@ -58,12 +58,14 @@ Ilqg ph xqghuqhdwk"
 Very strange language tho.
 
 Anyway, can you find me what is my speciality then?🐧
-
 <end tag> 
+
 
 <Begin tag> Other options
 Heck, you might want to put my stories in the correct order tho.
 <end tag> 
+
+
 <Begin tag> Tarot?
 Aha! Then I am a Tarot reading Bot! 
 
@@ -73,6 +75,8 @@ Aha! Then I am a Tarot reading Bot!
 Mission complete, you've found Bot_de_samew, the Tarot reading Chatbot!
 =========================
 <end tag> 
+
+
 <Begin tag> Trapped?
 Good job detective.
 We decode the text message inside the Chat logs and we got this text:
@@ -86,6 +90,8 @@ Doubt that there's something left? Restart the game then!
 Replay anytime by saying "Hi"!
 
 <end tag> 
+
+
 <Begin tag> Aight
 (Any input and message send will restart the game. You can restart anytime by sending a message to our chatbot.
 It's a real point-and-click adventure - mystery solver game, so all you have to do is pick an option and explore our prototype app! Click on the prototype below, and Activate Chatbot to start.
@@ -94,3 +100,4 @@ Have fun and good luck detective 🐧)
 Note: You don't need to re-click the Prototype link.
 
 <end tag> 
+--------------------------------------------Right Path Ends---------------------------------------------
