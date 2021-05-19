@@ -3,16 +3,75 @@ import java.io.*;
 
 public class mainGameAn{
     public static void main(String[] args){
-        messagePhrase intro = new messagePhrase("rightPath.txt");
-        messagePhrase options = new messagePhrase("options_an.txt");
+        messagePhrase quote = new messagePhrase("easterQuote.txt");
+        messagePhrase options = new messagePhrase("easterOptions.txt");
         messagePhrase cases = new messagePhrase("tempcase.txt");
-
-        intro.messagePrint("Introduction");
-
-        editFile(options, intro, cases);
-
+        if (editQ()) editFile(quote, options, cases);
+        gameLoop(quote, options, true);
+        
+        // gameOver();
+    }
+    public static boolean editQ(){
+        System.out.println("edit file? y/n");
+        Scanner input = new Scanner(System.in);
+        String command = input.nextLine();
+        if (command.equals("y")) return true;
+        return false;
     }
 
+    public static void popUp(messagePhrase quotes, messagePhrase options, String message){
+        quotes.messagePrint(message);
+        options.messagePrint(message);
+    }
+
+    public static void gameLoop(messagePhrase quotes, messagePhrase options, boolean gameRestart){
+        popUp(quotes, options, "Greetings");
+        String input = options.takeUserInput();
+        if (input.equals("q")) {
+            gameOver();
+            return;
+        }
+        // System.out.println("input "+input);
+        String choice = options.pickOptions("Greetings", input);
+        // System.out.println("Choice: "+choice);
+        // popUp(quotes, options, choice);
+        gameRestart = false;
+        while (!gameRestart){
+            popUp(quotes, options, choice);
+            input = options.takeUserInput();
+            choice = options.pickOptions(choice, input);
+            System.out.println("User choose: "+ input);
+            if (input.equals("q")){
+                gameRestart = true; 
+            }
+            
+            // Close condition
+        }
+        gameOver();
+    }
+        
+    public static String userResponse(messagePhrase options, messagePhrase quotes,String quote, String choice){
+        // First 2 parameter is for library, last one is to search.
+
+        // Give the quote
+        System.out.println("==================");
+        quotes.messagePrint(quote);
+        System.out.println("------------------");
+        
+        // Scanner input = new Scanner(System.in);
+        // String userInput = input.nextLine();
+        // switch(userInput)
+        // {
+        //     case "a": return 
+        // }
+        System.out.println("------------------");
+        System.out.println("==================");
+        return "q";
+    }
+    
+    public static void gameOver(){
+        System.out.println("GameOver!");
+    }
     public static void commandMessage(messagePhrase intro, messagePhrase options, messagePhrase cases){
         System.out.println("==================");
         System.out.println("Main menu:");
