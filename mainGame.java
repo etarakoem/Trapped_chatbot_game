@@ -6,10 +6,17 @@ public class mainGame{
         messagePhrase quote = new messagePhrase("easterQuote.txt");
         messagePhrase options = new messagePhrase("easterOptions.txt");
         messagePhrase cases = new messagePhrase("tempcase.txt");
-        // quote.messagePrint("Greetings");
+        if (editQ()) editFile(quote, options, cases);
         gameLoop(quote, options, true);
-        // editFile(options, intro, cases);
+        
         // gameOver();
+    }
+    public static boolean editQ(){
+        System.out.println("edit file? y/n");
+        Scanner input = new Scanner(System.in);
+        String command = input.nextLine();
+        if (command.equals("y")) return true;
+        return false;
     }
 
     public static void popUp(messagePhrase quotes, messagePhrase options, String message){
