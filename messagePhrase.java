@@ -219,7 +219,6 @@ public class messagePhrase {
     // Print out full name title
     public String pickOptions(String quote,String option){
         try{
-            messagePrint(quote);
             inGameOptions();
             ArrayList<String> quotes = getMessages(quote);
             String choices = option+")";

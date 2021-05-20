@@ -12,24 +12,29 @@ public class mainGame{
         // gameOver();
     }
     public static boolean editQ(){
-        System.out.println("edit file? y/n");
+        System.out.println("Press 'e' to edit file, any keys to start game");
         Scanner input = new Scanner(System.in);
         String command = input.nextLine();
-        if (command.equals("y")) return true;
+        if (command.equals("e")) return true;
         return false;
     }
 
-    public static void popUp(messagePhrase quotes, messagePhrase options, String message){
+    public static boolean popUp(messagePhrase quotes, messagePhrase options, String message){
         if (!quotes.nameCheck(message) || !options.nameCheck(message)){
-            System.out.println("No info, return to previous");
-            return;
+            System.out.println("No info yet");
+            System.err.println("Quitting...");
+            return true;
         }
         quotes.messagePrint(message);
         options.messagePrint(message);
+        return false;
     }
 
     public static void gameLoop(messagePhrase quotes, messagePhrase options, boolean gameRestart){
-        popUp(quotes, options, "Greetings");
+        if (popUp(quotes, options, "Greetings")){
+            gameOver();
+            return;
+        }
         String input = options.takeUserInput();
         if (input.equals("q")) {
             gameOver();
@@ -39,7 +44,10 @@ public class mainGame{
         String choice = options.pickOptions("Greetings", input);
         gameRestart = false;
         while (!gameRestart){
-            popUp(quotes, options, choice);
+            if (popUp(quotes, options, choice)){
+                gameOver();
+                return;
+            }
             input = options.takeUserInput();
             choice = options.pickOptions(choice, input);
             System.out.println("User choose: "+ input);
