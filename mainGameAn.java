@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class mainGame{
+public class mainGameAn{
     public static void main(String[] args){
         messagePhrase quote = new messagePhrase("easterQuote.txt");
         messagePhrase options = new messagePhrase("easterOptions.txt");
