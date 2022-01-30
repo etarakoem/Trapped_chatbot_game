@@ -5,7 +5,7 @@ Just a simple point and click/rpg/escape room game made by 2 First Year Computer
 
 ## Requirement:
 
-Trapped_chatbot_game requires [Java](https://www.java.com/) SE15+ to run.
+Trapped_chatbot_game requires [Java](https://www.java.com/) SE15+ and [Python3](3.10.2) to run.
 
 ## Try it out:
 
